@@ -19,7 +19,6 @@ def get_all_gameids(years):
     gameids = set()
     for year in years:
         urls = get_team_urls(year)
-        print urls
         for url in urls:
             gameids.update(get_gameids(url))
         with open('gameids.txt', 'a') as f:
